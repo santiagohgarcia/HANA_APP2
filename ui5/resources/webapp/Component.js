@@ -25,10 +25,9 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-
-			var oModel = new sap.ui.model.odata.ODataModel("/xsodata/purchaseOrder.xsodata", true);
-
-			this.setModel(oModel, "po");
+			
+			//set the PO Model
+			this.setModel(models.createPOModel(), "po");
 		}
 	});
 });

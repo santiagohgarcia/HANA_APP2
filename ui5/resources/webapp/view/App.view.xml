@@ -6,7 +6,7 @@
 				<content>
 					<List items="{po>/POHeader}">
 						<items>
-							<StandardListItem title="{po>PURCHASEORDERID}"></StandardListItem>
+							<StandardListItem title="{po>PURCHASEORDERID}" icon="sap-icon://product"></StandardListItem>
 						</items>
 					</List>
 				</content>

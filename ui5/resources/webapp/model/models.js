@@ -10,6 +10,10 @@ sap.ui.define([
 			var oModel = new JSONModel(Device);
 			oModel.setDefaultBindingMode("OneWay");
 			return oModel;
+		},
+		
+		createPOModel: function() {
+			return new sap.ui.model.odata.ODataModel("/xsodata/purchaseOrder.xsodata", true);
 		}
 
 	};
