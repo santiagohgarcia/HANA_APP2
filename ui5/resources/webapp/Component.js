@@ -25,7 +25,7 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-			
+
 			//set the PO Model
 			this.setModel(models.createPOModel(), "po");
 		}

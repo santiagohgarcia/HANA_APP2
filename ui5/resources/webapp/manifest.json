@@ -35,8 +35,8 @@
 			"sap_bluecrystal"
 		]
 	},
-
 	"sap.ui5": {
+		"handleValidation": true,
 		"rootView": {
 			"viewName": "web.ui5.view.App",
 			"type": "XML"
@@ -80,16 +80,22 @@
 				"controlId": "idAppControl"
 			},
 			"routes": [{
-				"name": "RouteView1",
-				"pattern": "RouteView1",
-				"target": ["TargetView1"]
+				"name": "POList",
+				"pattern": "",
+				"target": "POList"
+			}, {
+				"name": "PODetail",
+				"pattern": "PurchaseOrder({PURCHASEORDERID})",
+				"target": "PODetail"
 			}],
 			"targets": {
-				"TargetView1": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "View1"
+				"POList": {
+					"viewName": "PurchaseOrder.List",
+					"viewId": "PurchaseOrder.List"
+				},
+				"PODetail": {
+					"viewName": "PurchaseOrder.Detail",
+					"viewId": "PurchaseOrder.Detail"
 				}
 			}
 		}

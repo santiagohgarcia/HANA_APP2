@@ -1,0 +1,9 @@
+<mvc:View controllerName="web.ui5.controller.PurchaseOrder.List" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<Page showHeader="false">
+		<List items="{po>/POHeader}" headerText="{i18n>POList_Title}" mode="Navigation">
+			<ObjectListItem title="{po>PURCHASEORDERID}" icon="sap-icon://product" press="onPressPO" type="Navigation"
+			number="{ path: 'po>GROSSAMOUNT', type: '.types.currencyWithoutUnit' }" numberUnit="{po>CURRENCY}"></ObjectListItem>
+		</List>
+	</Page>
+</mvc:View>

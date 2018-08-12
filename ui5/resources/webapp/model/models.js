@@ -11,9 +11,11 @@ sap.ui.define([
 			oModel.setDefaultBindingMode("OneWay");
 			return oModel;
 		},
-		
+
 		createPOModel: function() {
-			return new sap.ui.model.odata.ODataModel("/xsodata/purchaseOrder.xsodata", true);
+			var oModel = new sap.ui.model.odata.ODataModel("/xsodata/purchaseOrder.xsodata", true);
+			oModel.setDefaultBindingMode("TwoWay");
+			return oModel;
 		}
 
 	};
