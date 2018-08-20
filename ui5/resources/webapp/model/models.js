@@ -13,8 +13,11 @@ sap.ui.define([
 		},
 
 		createPOModel: function() {
-			var oModel = new sap.ui.model.odata.ODataModel("/xsodata/purchaseOrder.xsodata", true);
-			oModel.setDefaultBindingMode("TwoWay");
+			var oModel = new sap.ui.model.odata.ODataModel("/xsodata/purchaseOrder.xsodata", {
+				defaultUpdateMethod: "PUT",
+				useBatch: true,
+				defaultBindingMode: sap.ui.model.BindingMode.TwoWay
+			});
 			return oModel;
 		}
 

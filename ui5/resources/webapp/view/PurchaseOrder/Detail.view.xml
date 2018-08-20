@@ -1,5 +1,6 @@
 <mvc:View controllerName="web.ui5.controller.PurchaseOrder.Detail" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<Page>
 	<f:Form editable="true">
 		<f:toolbar>
 			<Toolbar>
@@ -13,11 +14,18 @@
 		</f:layout>
 		<f:FormContainer >
 			<f:FormElement label="{i18n>PODetail_Partner}">
-				<Input required="true" value="{po>PARTNER}"/>
+				<Input fieldGroupIds="poFields" required="true" value="{po>PARTNER}" valueLiveUpdate="true"/>
 			</f:FormElement>
 			<f:FormElement label="{i18n>PODetail_GrossAmount}">
-				<Input required="true" value="{path: 'po>GROSSAMOUNT', type: '.types.currencyWithoutUnit'}"/>
+				<Input fieldGroupIds="poFields" required="true" value="{path: 'po>GROSSAMOUNT', type: '.types.currencyWithoutUnit'}" valueLiveUpdate="true"/>
 			</f:FormElement>
 		</f:FormContainer>
 	</f:Form>
+	<footer>
+		<Toolbar>
+			<ToolbarSpacer/>
+			<Button icon="sap-icon://save" press="onSave"></Button>
+		</Toolbar>
+	</footer> 
+	</Page>
 </mvc:View>
